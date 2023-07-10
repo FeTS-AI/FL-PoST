@@ -1,5 +1,9 @@
 # FeTS: Federated Tumor Segmentation 
 
+Sarah was here.
+
+Not really.
+
 The Federated Tumor Segmentation (FeTS) platform, describes an on-going under development open-source toolkit, with a user-friendly graphical user interface (GUI), aiming at:
 
 - bringing pre-trained segmentation models of numerous deep learning algorithms and their fusion, closer to clinical experts and researchers, thereby enabling easy quantification of new radiographic scans and comparative evaluation of new algorithms.

@@ -1,11 +1,17 @@
-# FeTS: Federated Tumor Segmentation 
+# FL-PoST: Federated Learning for Postoperative Segmentation of Treated glioblastoma (FeTS 2.0)
+
+Duke University and the Response Assessment in Neuro-Oncology (RANO) team are excited to announce a new collaborative study seeking to extend the Federated Tumor Segmentation (FeTS) initiative to the post-operative/post-treatment setting using a large, diverse imaging dataset derived from patients with previously treated glioblastoma.
+
+FL-PoST is the second iteration of the FeTS initiative and aims to allow quantitative longitudinal volumetric assessment of glioblastoma MRI subregions in the post-treatment follow up setting, which is the most common setting for obtaining brain MRI in these patients. We further plan to validate the FL-PoST model using clinical trial data with expert RANO assessments. 
+
+The FeTS initiative aims to revolutionize the quantification of brain tumors by establishing an international federation of healthcare institutions and developing an open-source software ecosystem that offers simple, automated, and accurate tumor segmentation free from inter-reader variability. 
 
 The Federated Tumor Segmentation (FeTS) platform, describes an on-going under development open-source toolkit, with a user-friendly graphical user interface (GUI), aiming at:
 
 - bringing pre-trained segmentation models of numerous deep learning algorithms and their fusion, closer to clinical experts and researchers, thereby enabling easy quantification of new radiographic scans and comparative evaluation of new algorithms.
 - allowing secure multi-institutional collaborations via federated learning to improve these pre-trained models without sharing patient data, thereby overcoming legal, privacy, and data-ownership challenges.
 
-Successful completion of this project will lead to an easy-to-use potentially-translatable tool enabling easy, fast, objective, repeatable and accurate tumor segmentation, without requiring a computational background by the user, and while facilitating further analysis of tumor radio-phenotypes towards accelerating discovery. 
+Successful completion of this project will lead to an easy-to-use, potentially-translatable tool enabling easy, fast, objective, repeatable and accurate tumor segmentation, without requiring a computational background by the user, and while facilitating further analysis of tumor radio-phenotypes towards accelerating discovery. 
 
 FeTS is developed and maintained by the [Center for Biomedical Image Computing and Analytics (CBICA)](https://www.cbica.upenn.edu/) at the University of Pennsylvania, in collaboration with [Intel Labs](https://www.intel.com/content/www/us/en/research/overview.html), [Intel AI](https://www.intel.com/ai), and [Intel Internet of Things Group](https://www.intel.com/iot
 ).

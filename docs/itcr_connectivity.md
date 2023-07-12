@@ -1,18 +1,20 @@
+# ITCR Connectivity
 
 This section includes a reference of all ongoing and existing connections between FeTS and other projects funded under the [Informatics Technology for Cancer Research (ITCR)](https://itcr.cancer.gov/) program.
 
 A connectivity map featuring all ITCR projects can be found [here](https://www.ndexbio.org/#/network/04c0a7e8-af92-11e7-94d3-0ac135e8bacf).
 
-- [Existing Connections](#existing-connections)
-	- [DCMTK](#dcmtk)
-	- [DCMQI](#dcmqi)
-	- [CaPTk](#captk)
-	- [Synapse PACS](#synapse-pacs)
-	- [TCIA and IDC](#tcia-and-idc)
-- [Ongoing Development](#ongoing-development)
-	- [XNAT](#xnat)
-	- [FLAIM](#flaim)
-	- [PRISM](#prism)
+- [ITCR Connectivity](#itcr-connectivity)
+	- [Existing Connections](#existing-connections)
+		- [DCMTK](#dcmtk)
+		- [DCMQI](#dcmqi)
+		- [CaPTk](#captk)
+		- [Synapse PACS](#synapse-pacs)
+		- [TCIA and IDC](#tcia-and-idc)
+	- [Ongoing Development](#ongoing-development)
+		- [XNAT](#xnat)
+		- [FLAIM](#flaim)
+		- [PRISM](#prism)
 
 ##  Existing Connections
 

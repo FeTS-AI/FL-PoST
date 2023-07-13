@@ -3,6 +3,8 @@ show_downloads: True
 navigation:
   - title: Home
     url: /
+  - title: Announcement
+    url: announcement
   - title: Application Setup
     url: setup
   - title: Process the Data

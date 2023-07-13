@@ -55,6 +55,7 @@ Currently, these are available through the FeTS Installer (see Downloads). The m
 https://upenn.box.com/v/fets2021consensusmodels
 
 ## Table of Contents
+- [Announcement](./announcement.md)
 - [Application Setup](./setup.md)
 - [Process the Data](./process_data.md)
 - [Run the Application](./runningApplication.md)

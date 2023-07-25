@@ -78,22 +78,9 @@ Input_Data
 │   │ ...
 ```
 - Ensure that unexpected "special" string characters that could hamper the file system's processing are not present (read [this article](https://www.mtu.edu/umc/services/websites/writing/characters-avoid/#:~:text=Illegal%20Filename%20Characters) for more details). Some examples of this include (and are not limited to): `!`, `@`, `#`, `$`, `%`, `^`, `&`, `*`, `'`, `;`, `:`, `,`, `~`
-- Construct a CSV (let's call this **raw_data.csv**) containing the first DICOM images from each modality:
-```
-SubjectID,Timepoint,T1,T1GD,T2,T2FLAIR
-Patient_001,Timepoint_001,/path/to/Patient_001/Timepoint_001/T1/image_001.dcm,/path/to/Patient_001/Timepoint_001/T1GD/image_001.dcm,/path/to/Patient_001/Timepoint_001/T2/image_001.dcm,/path/to/Patient_001/Timepoint_001/T2FLAIR/image_001.dcm
-Patient_001,Timepoint_002,/path/to/Patient_001/Timepoint_002/T1/image_001.dcm,/path/to/Patient_001/Timepoint_002/T1GD/image_001.dcm,/path/to/Patient_001/Timepoint_002/T2/image_001.dcm,/path/to/Patient_001/Timepoint_002/T2FLAIR/image_001.dcm
-...
-Patient_001,Timepoint_N,/path/to/Patient_001/Timepoint_N/T1/image_001.dcm,/path/to/Patient_001/Timepoint_N/T1GD/image_001.dcm,/path/to/Patient_001/Timepoint_N/T2/image_001.dcm,/path/to/Patient_001/Timepoint_N/T2FLAIR/image_001.dcm
-Patient_JohnDoe,Timepoint_001,/path/to/Patient_JohnDoe/Timepoint_001/T1/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_001/T1GD/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_001/T2/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_001/T2FLAIR/image_001.dcm
-Patient_JohnDoe,Timepoint_002,/path/to/Patient_JohnDoe/Timepoint_002/T1/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_002/T1GD/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_002/T2/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_002/T2FLAIR/image_001.dcm
-...
-Patient_JohnDoe,Timepoint_N,/path/to/Patient_JohnDoe/Timepoint_N/T1/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_N/T1GD/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_N/T2/image_001.dcm,/path/to/Patient_JohnDoe/Timepoint_N/T2FLAIR/image_001.dcm
-...
-```
-  - Please note that subject IDs should be unique strings:
-    - **Problematic**: "Patient_1", "Patient_2", ..., "Patient_10", ...,"Patient_20", ...,"Patient_100"
-    - **Acceptable**: "Patient_001", "Patient_002", ..., "Patient_010", ..., "Patient_020", ..., "Patient_100", ...
+- Please note that subject IDs should be **unique strings** and can be parsed by code. Some examples of problematic and acceptable subject IDs are as follows:
+  - **Problematic**: "Patient_1", "Patient_2", ..., "Patient_10", ...,"Patient_20", ...,"Patient_100"
+  - **Acceptable**: "Patient_001", "Patient_002", ..., "Patient_010", ..., "Patient_020", ..., "Patient_100", ...
 
 
 [Back To Top &uarr;](#table-of-contents)

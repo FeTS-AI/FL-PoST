@@ -1,6 +1,6 @@
 # Processing the Data for FeTS
 
-## Data Requirement
+## Data Requirements
 
 - Brain MRI scans obtained from any manufacturer/model/field strength of scanner.
 - Confirmed initial diagnosis of glioblastoma.

@@ -7,7 +7,7 @@
   - [Table of Contents](#table-of-contents)
   - [Data Requirements](#data-requirements)
   - [Data Arrangement](#data-arrangement)
-    - [CSV Construction](#csv-construction)
+  - [CSV Construction](#csv-construction)
   - [Back To Top ↑](#back-to-top-)
 
 [Back To Top &uarr;](#table-of-contents)
@@ -133,7 +133,7 @@ Input_Data
   - **Problematic**: "Patient_1", "Patient_2", ..., "Patient_10", ...,"Patient_20", ...,"Patient_100"
   - **Acceptable**: "Patient_001", "Patient_002", ..., "Patient_010", ..., "Patient_020", ..., "Patient_100", ...
 
-### CSV Construction
+## CSV Construction
 
 - For users starting with DICOM scans:
 ```

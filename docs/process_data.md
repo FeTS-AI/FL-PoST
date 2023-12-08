@@ -3,13 +3,15 @@
 **Note** the `${fets_root_dir}` from [Setup](./setup.md#set-up-the-environment).
 
 ## Table of Contents
-- [Data Arrangement](#data-arrangement)
-- [Running Pre-processing](#pre-processing)
-- [Starting from pre-processed data](#starting-from-pre-processed-data)
+- [Processing the Data for FeTS](#processing-the-data-for-fets)
+  - [Table of Contents](#table-of-contents)
+  - [Data Arrangement](#data-arrangement)
+  - [Back To Top ↑](#back-to-top-)
 
 [Back To Top &uarr;](#table-of-contents)
 
 ## Data Arrangement
+
 **Note** the `${fets_root_dir}` from [Setup](./setup.md#set-up-the-environment).
 
 For the first application of FeTS in volumetric brain tumor MRI scans, you should follow the pre-processing pipeline defined in the [International Brain Tumor Segmentation (BraTS) Challenge](http://braintumorsegmentation.org/):

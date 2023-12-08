@@ -10,7 +10,6 @@
   - [CSV Construction](#csv-construction)
   - [Back To Top ↑](#back-to-top-)
 
-[Back To Top &uarr;](#table-of-contents)
 
 ## Data Requirements
 

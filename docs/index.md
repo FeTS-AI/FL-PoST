@@ -1,6 +1,6 @@
 # FL-PoST: Federated Learning for Postoperative Segmentation of Treated glioblastoma (FeTS 2.0)
 
-Duke University and the Response Assessment in Neuro-Oncology (RANO) team are excited to announce a new collaborative study seeking to extend the Federated Tumor Segmentation (FeTS) initiative to the post-operative/post-treatment setting using a large, diverse imaging dataset derived from patients with previously treated glioblastoma.
+**Duke University**, **Indiana University**, and the Response Assessment in Neuro-Oncology (RANO) team are excited to announce a new collaborative study seeking to extend the Federated Tumor Segmentation (FeTS) initiative to the post-operative/post-treatment setting using a large, diverse imaging dataset derived from patients with previously treated glioblastoma.
 
 FL-PoST is the second iteration of the FeTS initiative and aims to allow quantitative longitudinal volumetric assessment of glioblastoma MRI subregions in the post-treatment follow up setting, which is the most common setting for obtaining brain MRI in these patients. We further plan to validate the FL-PoST model using clinical trial data with expert RANO assessments. 
 

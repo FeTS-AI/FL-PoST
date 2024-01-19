@@ -2,7 +2,7 @@
 
 ## Announcement
 
-**Duke University**, the **University of Pennsylvania**, and the [Response Assessment in Neuro-Oncology (RANO)](https://doi.org/10.1093/nop/npv037) team are excited to announce a new collaborative study seeking to extend the FeTS initiative to the post-operative/post-treatment setting using a large, diverse imaging dataset derived from patients with previously treated glioblastoma, which is hereby termed **Federated Learning for Postoperative Segmentation of Treated glioblastoma (FL-PoST)** or simply **FeTS 2.0**. 
+**Duke University**, **Indiana University**, and the [Response Assessment in Neuro-Oncology (RANO)](https://doi.org/10.1093/nop/npv037) team are excited to announce a new collaborative study seeking to extend the FeTS initiative to the post-operative/post-treatment setting using a large, diverse imaging dataset derived from patients with previously treated glioblastoma, which is hereby termed **Federated Learning for Postoperative Segmentation of Treated glioblastoma (FL-PoST)** or simply **FeTS 2.0**. 
 
 The **FL-PoST** initiative aims to revolutionize the quantification of brain tumors by establishing an international federation of healthcare institutions and developing an open-source software ecosystem that offers simple, automated, and accurate tumor segmentation free from inter-reader variability.
 

@@ -11,5 +11,7 @@ navigation:
     url: runningApplication
   - title: Extras
     url: extras
+  - title: Running Federated Training
+    url: fl
   - title: ITCR Connectivity
     url: itcr_connectivity

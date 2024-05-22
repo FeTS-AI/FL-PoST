@@ -2,6 +2,25 @@
 
 This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start training, please follow the following steps:
 
+## 0. Update your MedPerf Installation
+
+The new MedPerf code has been moved to a new branch. To update your MedPerf installation:
+
+1. Locate the folder where you had installed MedPerf before. Delete the folder:
+
+```bash
+rm -rf medperf/
+```
+
+2. Re-install MedPerf:
+
+```bash
+git clone https://github.com/hasan7n/medperf
+cd medperf
+git checkout fl-poc
+pip install -e ./cli --force-reinstall
+```
+
 ## 1. Mark your dataset as Operational
 
 Run the following command to mark your dataset as Operational (i.e., ready for training):

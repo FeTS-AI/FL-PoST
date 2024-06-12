@@ -12,7 +12,7 @@ The new MedPerf code has been moved to a new branch. To update your MedPerf inst
 rm -rf medperf/
 ```
 
-2. Re-install MedPerf:
+1. Re-install MedPerf:
 
 ```bash
 git clone https://github.com/hasan7n/medperf
@@ -21,7 +21,7 @@ git checkout fl-poc
 pip install -e ./cli --force-reinstall
 ```
 
-3. The monitoring tool is not necessary for training. But in case you still plan to use it, re-install it as follows: (Make sure you are in the `medperf` folder)
+1. The monitoring tool is not necessary for training. But in case you still plan to use it, re-install it as follows: (Make sure you are in the `medperf` folder)
 
 ```bash
 pip install -e scripts/monitor

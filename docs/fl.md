@@ -6,13 +6,13 @@ This guide assumes you finished preparing your dataset and reached [this step](h
 
 The new MedPerf code has been moved to a new branch. To update your MedPerf installation:
 
-1. Locate the folder where you had installed MedPerf before. Delete the folder:
+#### 0.1 Locate the folder where you had installed MedPerf before. Delete the folder
 
 ```bash
 rm -rf medperf/
 ```
 
-1. Re-install MedPerf:
+#### 0.2 Re-install MedPerf
 
 ```bash
 git clone https://github.com/hasan7n/medperf
@@ -21,7 +21,7 @@ git checkout fl-poc
 pip install -e ./cli --force-reinstall
 ```
 
-1. The monitoring tool is not necessary for training. But in case you still plan to use it, re-install it as follows: (Make sure you are in the `medperf` folder)
+#### 0.3 The monitoring tool is not necessary for training. But in case you still plan to use it, re-install it as follows: (Make sure you are in the `medperf` folder)
 
 ```bash
 pip install -e scripts/monitor

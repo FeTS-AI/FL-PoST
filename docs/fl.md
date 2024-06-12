@@ -21,6 +21,12 @@ git checkout fl-poc
 pip install -e ./cli --force-reinstall
 ```
 
+3. The monitoring tool is not necessary for training. But in case you still plan to use it, re-install it as follows: (Make sure you are in the `medperf` folder)
+
+```bash
+pip install -e scripts/monitor
+```
+
 ## 1. Mark your dataset as Operational
 
 Run the following command to mark your dataset as Operational (i.e., ready for training):

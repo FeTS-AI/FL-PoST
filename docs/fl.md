@@ -1,6 +1,6 @@
 # Running Training
 
-This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start training, please follow the following steps:
+This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start training, please follow the steps below. **Note that steps 1, 2, and 3 can be skipped in case you ran them before using the same dataset ID.**
 
 ## 0. Update your MedPerf Installation
 
@@ -13,6 +13,8 @@ rm -rf medperf/
 ```
 
 #### 0.2 Re-install MedPerf
+
+(Don't forget to activate your medperf virtual environment)
 
 ```bash
 git clone https://github.com/hasan7n/medperf
@@ -29,13 +31,15 @@ pip install -e scripts/monitor
 
 ## 1. Mark your dataset as Operational
 
-Run the following command to mark your dataset as Operational (i.e., ready for training):
+(This command may take some time) Run the following command to mark your dataset as Operational (i.e., ready for training):
 
 ```bash
 medperf dataset set_operational -d DATASET_ID
 ```
 
 Replace `DATASET_ID` with your dataset ID. This command will calculate the hash of your prepared dataset and some statistics. You will be presented with this information, and will be prompted to confirm uploading them to the MedPerf server.
+
+To recall, you can get your dataset ID by running `medperf dataset ls --mine`.
 
 ![](images/op.png)
 
@@ -83,10 +87,12 @@ If you want to use a GPU for training, follow the instructions found [in this se
 
 #### 4.2 Start Training
 
+Note that this command below should be left running for a long period of time. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
+
 Now run the following command to start training:
 
 ```bash
-medperf dataset train -t 1 -d DATASET_ID
+medperf dataset train -t 1 -d DATASET_ID --overwrite
 ```
 
 Replace `DATASET_ID` with your dataset ID.
@@ -99,8 +105,4 @@ Confirm if you think everything looks good. Once you confirm, you will eventuall
 
 ![](images/t2.png)
 
-After some time, you will reach the state where the tool is trying to connect with the aggregation server: (The IP address will be different in your case)
-
-![](images/wait.png)
-
-This means that everything is going OK on your end. Please leave it running. The aggregation server will soon be opened and training will start on its own.
+After some time, training will start. Please leave it running.

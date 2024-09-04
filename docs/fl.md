@@ -1,6 +1,10 @@
 # Running Training
 
-This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start training, please follow the steps below. **Note that steps 1, 2, and 3 can be skipped in case you ran them before using the same dataset ID.**
+This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start training, please follow the steps below.
+
+**VERY IMPORTANT Note1: Steps 1, 2, and 3 should be skipped in case you ran them successfully before.**
+
+**VERY IMPORTANT Note2: If you face "invalid refresh token" error, reauthenticate by logging out first then logging in again.**
 
 ## 0. Update your MedPerf Installation
 

@@ -6,7 +6,7 @@ This guide assumes you finished preparing your dataset and reached [this step](h
 
 **VERY IMPORTANT Note2: If you face "invalid refresh token" error, reauthenticate by logging out first then logging in again.**
 
-## 0. Update your MedPerf Installation
+## 0. Change your MedPerf Branch
 
 The new MedPerf code has been moved to a new branch. To update your MedPerf installation:
 

@@ -6,31 +6,17 @@ This guide assumes you finished preparing your dataset and reached [this step](h
 
 **VERY IMPORTANT Note2: If you face "invalid refresh token" error, reauthenticate by logging out first then logging in again.**
 
-## 0. Change your MedPerf Branch
+## 0. Change your MedPerf Branch and Re-install MedPerf
 
 The new MedPerf code has been moved to a new branch. To update your MedPerf installation:
 
-#### 0.1 Locate the folder where you had installed MedPerf before. Delete the folder
+Go to the folder where you installed MedPerf (the `medperf` repository folder). Run the following (Don't forget to activate your medperf virtual environment):
 
 ```bash
-rm -rf medperf/
-```
-
-#### 0.2 Re-install MedPerf
-
-(Don't forget to activate your medperf virtual environment)
-
-```bash
-git clone https://github.com/hasan7n/medperf
-cd medperf
-git checkout fl-poc
+git remote add training https://github.com/hasan7n/medperf.git
+git fetch training
+git checkout -b fl-poc training/fl-poc
 pip install -e ./cli --force-reinstall
-```
-
-#### 0.3 The monitoring tool is not necessary for training. But in case you still plan to use it, re-install it as follows: (Make sure you are in the `medperf` folder)
-
-```bash
-pip install -e scripts/monitor
 ```
 
 ## 1. Mark your dataset as Operational

@@ -77,7 +77,9 @@ If you want to use a GPU for training, follow the instructions found [in this se
 
 #### 4.2 Start Training
 
-Note that this command below should be left running for a long period of time. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
+You have the option to run training with `--restart_on_failure` flag, which means that the process will restart by itself if it encountered a failure, or if the experiment organizers change the training configuration. Note that this means the command will not wait for your approval on the training configuration, it will only ask you to confirm one time that you are OK with automatic restarts. **Don't use this flag if you didn't test with us before and successfully trained for at least one round,** otherwise you may not easily figure out that you have an error that needs our help.
+
+Running the command in this section should be left running for a long period of time. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
 
 Now run the following command to start training:
 
@@ -85,9 +87,15 @@ Now run the following command to start training:
 medperf dataset train -t 1 -d DATASET_ID --overwrite
 ```
 
+Or, if you want to use the `--restart_on_failure` flag:
+
+```bash
+medperf dataset train -t 1 -d DATASET_ID --restart_on_failure
+```
+
 Replace `DATASET_ID` with your dataset ID.
 
-You should first see something similar to the screenshot below, where you are presented with the configuration set by the training experiment owner and will be used throughout training:
+If you didn't use `--restart_on_failure`, you should first see something similar to the screenshot below, where you are presented with the configuration set by the training experiment owner and will be used throughout training:
 
 ![](images/t1.png)
 

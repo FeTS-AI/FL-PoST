@@ -2,9 +2,29 @@
 
 This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start training, please follow the steps below.
 
-**VERY IMPORTANT Note1: Steps 0, 1, 2, and 3 should be skipped in case you ran them successfully before.**
+**Note: If you face "invalid refresh token" error, reauthenticate by logging out first then logging in again.**
 
-**VERY IMPORTANT Note2: If you face "invalid refresh token" error, reauthenticate by logging out first then logging in again.**
+# Important steps for the Final Model Training
+
+For the final model training to happen smoothly without interruption, and to minimize your interaction with the software in the next 3 weeks, please do the following
+
+- Delete the MedPerf logs to avoid any unexpected disk space shortage issue, by running the following:
+
+```bash
+rm ~/.medperf_logs/*
+```
+
+- To avoid login session expiration during the next 3 weeks, you should re-authenticate now. If you recall that the last time you logged in was less than a week ago, skip re-authentication. To re-authenticate, logout then login before you run step4, as follows (and follow instructions printed on the screen when you run the login command):
+
+```bash
+medperf auth logout
+medperf auth login
+```
+
+- For steps 0, 1, 2, and 3 below, skip any step that you have already done.
+- Go to the folder where you installed MedPerf (the `medperf` repository folder) and run `git pull` to get the latest changes.
+- For step 4 below, make sure you use the `--restart_on_failure` flag. We may change training configuration during the 3 weeks to test different models. If you don't use the `--restart_on_failure` flag, you will have to manually restart the command when we change the configuration.
+-
 
 ## 0. Change your MedPerf Branch and Re-install MedPerf
 
@@ -81,19 +101,23 @@ You have the option to run training with `--restart_on_failure` flag, which mean
 
 Running the command in this section should be left running for a long period of time. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
 
-Now run the following command to start training:
-
-```bash
-medperf dataset train -t 1 -d DATASET_ID --overwrite
-```
-
-Or, if you want to use the `--restart_on_failure` flag:
+Now run the following command to start training: (Replace `DATASET_ID` with your dataset ID.)
 
 ```bash
 medperf dataset train -t 1 -d DATASET_ID --restart_on_failure
 ```
 
-Replace `DATASET_ID` with your dataset ID.
+If you want to skip the restart_on_failure confirmation prompt, use the following flag additionally `--skip_restart_on_failure_prompt`:
+
+```bash
+medperf dataset train -t 1 -d DATASET_ID --restart_on_failure --skip_restart_on_failure_prompt
+```
+
+If you don't want to use `--restart_on_failure`, run this:
+
+```bash
+medperf dataset train -t 1 -d DATASET_ID --overwrite
+```
 
 If you didn't use `--restart_on_failure`, you should first see something similar to the screenshot below, where you are presented with the configuration set by the training experiment owner and will be used throughout training:
 

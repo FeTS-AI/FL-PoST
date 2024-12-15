@@ -25,7 +25,6 @@ medperf auth login
 - For steps 0, 1, 2, and 3 below, skip any step that you have already done.
 - Go to the folder where you installed MedPerf (the `medperf` repository folder) and run `git pull` to get the latest changes.
 - For step 4 below, make sure you use the `--restart_on_failure` flag. We may change training configuration during the 3 weeks to test different models. If you don't use the `--restart_on_failure` flag, you will have to manually restart the command when we change the configuration.
--
 
 ## 0. Change your MedPerf Branch and Re-install MedPerf
 

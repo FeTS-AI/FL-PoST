@@ -6,8 +6,9 @@ This guide assumes you finished preparing your dataset and reached [this step](h
 
 # Important steps for the Final Model Training
 
-For the final model training to happen smoothly without interruption, and to minimize your interaction with the software in the next 3 weeks, please do the following
+For the final model training to happen smoothly without interruption, and to minimize your interaction with the software in the next 3 weeks, please do the following:
 
+- Stop the currently running process by pressing CTRL+C on the terminal where you last run the training command.
 - Delete the MedPerf logs to avoid any unexpected disk space shortage issue, by running the following:
 
 ```bash

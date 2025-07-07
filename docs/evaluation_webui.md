@@ -1,4 +1,4 @@
-# Running Evaluation
+# Running Evaluation (Web User Interface)
 
 This guide assumes you finished preparing your dataset and reached [this step](https://docs.google.com/document/d/1731zXXb6ZRe6Nx5wnKBHZOdfEoTiTMAq/edit#heading=h.w0nnera5osyy). To start evaluation, please follow the steps below.
 
@@ -16,19 +16,19 @@ rm ~/.medperf_logs/*
 
 The instructions will cover the following steps:
 
-0. Update MedPerf if needed
-1. Running the MedPerf Web UI.
-2. Authentication with the MedPerf server.
-3. Setting your GPUs and your container platform (docker or singularity) if necessary.
-4. Opening your dataset dashboard.
-5. Setting your dataset as Operational.
-6. Associating your dataset with the inference experiment (i.e., the benchmark).
-7. Running inference.
-8. Submitting the inference results to the MedPerf server.
+1. Update MedPerf if needed
+2. Running the MedPerf Web UI.
+3. Authentication with the MedPerf server.
+4. Setting your GPUs and your container platform (docker or singularity) if necessary.
+5. Opening your dataset dashboard.
+6. Setting your dataset as Operational.
+7. Associating your dataset with the inference experiment (i.e., the benchmark).
+8. Running inference.
+9. Submitting the inference results to the MedPerf server.
 
 We also include at the end what to do in case something goes wrong.
 
-## 0. Update MedPerf if Needed
+## 1. Update MedPerf if Needed
 
 Navigate to your MedPerf repository folder that you cloned before. Run the following:
 
@@ -48,7 +48,7 @@ git checkout -b inference mlc/main
 
 Then verify again if the version becomes `0.1.5`.
 
-## 1. Run the Web UI
+## 2. Run the Web UI
 
 For an easier interaction with the software, MedPerf now has a local web interface. The web application will run locally on localhost (so, there are no requirements for open ports on your system). Running the command that starts the web UI in this section should be left running for the whole time you are using MedPerf for inference. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
 
@@ -68,7 +68,7 @@ You are presented with a security token to be used to access the web UI. To clea
 
 As shown in the image above, when you open the provided localhost link, you will be prompted to enter the security token. Paste it, and proceed by clicking the `Access Web UI` button.
 
-## 2. Authentication with the MedPerf server
+## 3. Authentication with the MedPerf server
 
 After entering the security token, the next page you will see depends on your authentication state. You will be in one of the three cases below (with screenshots):
 
@@ -92,7 +92,7 @@ Now to login to the MedPerf server, click on the `login` button on the top right
 
 ![](images/webui/06_login_instructions.png)
 
-## 3. Check your settings
+## 4. Check your settings
 
 After logging in, navigate to the settings page by clicking on the `settings` button in the top right corner. **Don't change or activate the profile, keep it `default`**. Check if the GPUs argument and the platform argument are as expected:
 
@@ -103,7 +103,7 @@ After logging in, navigate to the settings page by clicking on the `settings` bu
 
 If you change something, click `Apply Changes` button to make sure the changes take effect.
 
-## 4. Open your Dataset Dashboard
+## 5. Open your Dataset Dashboard
 
 Assuming you are logged in and you made sure your settings are as expected, click on the `Datasets` tab in the navigation bar in the top left. You will see a list of datasets. Turn on the switch that says `show only my datasets` to make searching for your dataset easier:
 
@@ -113,7 +113,7 @@ Find your dataset card (you should be able to recognize which one it is, either 
 
 ![](images/webui/09_dashboard_prepared.png)
 
-## 5. Mark your Dataset as Operational
+## 6. Mark your Dataset as Operational
 
 (If your dashboard shows that your dataset is already `OPERATION` and not `DEVELOPMENT`, skip this step.)
 
@@ -123,7 +123,7 @@ Now, click on the `Set Operational` button to set your dataset as operational (i
 
 Click `Yes`, and then proceed to the next step.
 
-## 6. Associate your dataset with the benchmark
+## 7. Associate your dataset with the benchmark
 
 After marking your dataset as operational, the page will refresh and you will be able to associate with the benchmark:
 
@@ -143,9 +143,9 @@ Feel free to keep the web page open or close it and come back later. **However, 
 
 If you close the web UI and want to be reminded later what URL you should enter to access the web UI, check the [last section](#help-access-the-web-ui-again).
 
-### 6.1 Confirming the association
+### 7.1 Confirming the association
 
-If you closed the web UI window, make sure to return back to your dataset dashboard as explained in [section 4 above](#4-open-your-dataset-dashboard)
+If you closed the web UI window, make sure to return back to your dataset dashboard as explained in [section 5 above](#5-open-your-dataset-dashboard)
 
 If the test succeeded, you should see that the bottom of the page is similar to the following:
 
@@ -153,7 +153,7 @@ If the test succeeded, you should see that the bottom of the page is similar to 
 
 It will present you with the test results and ask you to confirm association and sending these test results to the MedPerf server. Click `Yes` to confirm.
 
-## 7. Run Inference
+## 8. Run Inference
 
 Now you have your dataset associated with the benchmark. The page should have refreshed automatically and you should be able to see something similar to the following in the bottom of the dashboard:
 
@@ -175,7 +175,7 @@ Feel free to keep the web page open or close it and come back later. **However, 
 
 If you close the web UI and want to be reminded later what URL you should enter to access the web UI, check the [last section](#help-access-the-web-ui-again).
 
-### 7.1 After the inference is finished
+### 8.1 After the inference is finished
 
 You should see the page similar to the following after inference on all models is finished:
 
@@ -183,7 +183,7 @@ You should see the page similar to the following after inference on all models i
 
 Now you are left with a quick final step to submit these inference results to the MedPerf server!
 
-## 8. Upload results
+## 9. Upload results
 
 Now you will have to upload each result individually. You should click on the `Submit` button next to each model. When you click one of the `Submit` buttons, you will get a confirmation prompt as follows:
 
@@ -197,7 +197,7 @@ This concludes the inference experiment. Thanks for your participation!
 
 ## Help: Error encountered
 
-You may encounter an error at some point, could be during setting your dataset operational (section 5), during association (section 6), or inference (section 7).
+You may encounter an error at some point, could be during setting your dataset operational (section 6), during association (section 7), or inference (section 8).
 
 When you encounter an error, you will get an error pop up box. For example, this could happen during inference if your GPU has an issue:
 

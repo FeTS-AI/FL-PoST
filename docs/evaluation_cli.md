@@ -18,18 +18,18 @@ rm ~/.medperf_logs/*
 
 The instructions will cover the following steps:
 
-0. Update MedPerf if needed
-1. Authentication with the MedPerf server.
-2. Setting your GPUs and your container platform (docker or singularity) if necessary.
-3. Finding your dataset ID.
-4. Setting your dataset as Operational.
-5. Associating your dataset with the inference experiment (i.e., the benchmark).
-6. Running inference.
-7. Submitting the inference results to the MedPerf server.
+1. Update MedPerf if needed
+2. Authentication with the MedPerf server.
+3. Setting your GPUs and your container platform (docker or singularity) if necessary.
+4. Finding your dataset ID.
+5. Setting your dataset as Operational.
+6. Associating your dataset with the inference experiment (i.e., the benchmark).
+7. Running inference.
+8. Submitting the inference results to the MedPerf server.
 
 We also include at the end what to do in case something goes wrong.
 
-## 0. Update MedPerf if Needed
+## 1. Update MedPerf if Needed
 
 Navigate to your MedPerf repository folder that you cloned before. Run the following:
 
@@ -49,7 +49,7 @@ git checkout -b inference mlc/main
 
 Then verify again if the version becomes `0.1.5`.
 
-## 1. Authentication with the MedPerf server
+## 2. Authentication with the MedPerf server
 
 To avoid login session expiration later, you should re-authenticate now unless you recall that the last time you logged in was less than two weeks ago.
 
@@ -67,7 +67,7 @@ medperf auth login
 
 and follow the instructions [documented here](https://docs.medperf.org/concepts/auth/).
 
-## 2. Check your settings (GPUs and Container technology)
+## 3. Check your settings (GPUs and Container technology)
 
 Run the following to check your settings:
 
@@ -92,7 +92,7 @@ To set your GPU config to `device=0` (i.e., device ID 0):
 medperf profile set --gpus "device=0"
 ```
 
-## 3. Find your dataset ID
+## 4. Find your dataset ID
 
 You may already know your dataset ID since you were doing data preparation before. As a reminder, you can find your dataset ID by running the following command:
 
@@ -100,7 +100,7 @@ You may already know your dataset ID since you were doing data preparation befor
 medperf dataset ls --mine
 ```
 
-## 4. Mark your dataset as Operational
+## 5. Mark your dataset as Operational
 
 Run the following command to mark your dataset as Operational (i.e., ready for inference):
 
@@ -112,7 +112,7 @@ Replace `YOUR_DATASET_ID` with your dataset ID. This command will calculate the 
 
 ![](images/eval/01_operational.png)
 
-## 5. Associate your dataset with the benchmark
+## 6. Associate your dataset with the benchmark
 
 Running the command in this section should be left running for a long period of time. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
 
@@ -140,7 +140,7 @@ And after the command finishes, you will be prompted to confirm if you didn't us
 
 ![](images/eval/03_assoc_end.png)
 
-## 6. Start Inference
+## 7. Start Inference
 
 Running the command in this section should be left running for a long period of time. Make sure that you can keep your terminal open without interruptions, or use tools like tmux to run the command in a terminal window that you can detach.
 
@@ -162,9 +162,9 @@ And after the command finishes, your terminal will show something similar to the
 
 ![](images/eval/05_infer_end.png)
 
-## 7. Upload inference results (metrics)
+## 8. Upload inference results (metrics)
 
-After inference on all models is finished in step6, individual results of each model are created locally only. You should now upload them to the medperf server.
+After inference on all models is finished in section 7, individual results of each model are created locally only. You should now upload them to the medperf server.
 
 There are four models in total, so there are four results. The models IDs are `194`, `195`, `196`, and `197`. In order to upload a result, run the following:
 

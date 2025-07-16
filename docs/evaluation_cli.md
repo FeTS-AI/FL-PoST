@@ -37,7 +37,12 @@ Navigate to your MedPerf repository folder that you cloned before. Run the follo
 medperf --version
 ```
 
-If the version is `0.1.5`, then you just have to run `git pull`.
+If the version is `0.1.5`, then run:
+
+```bash
+git pull
+pip install -e ./cli --force-reinstall --no-cache
+```
 
 If the version is not `0.1.5`, then you have to run the following:
 
@@ -45,6 +50,7 @@ If the version is not `0.1.5`, then you have to run the following:
 git remote add mlc https://github.com/mlcommons/medperf
 git fetch mlc
 git checkout -b inference mlc/main
+pip install -e ./cli --force-reinstall --no-cache
 ```
 
 Then verify again if the version becomes `0.1.5`.

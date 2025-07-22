@@ -135,7 +135,7 @@ Click on the `Associate with Benchamrk` button so that your dataset is linked to
 
 Click on the blue button `Request Association`. This will run a compatibility test between your dataset and the benchmark:
 
-![](images/webui/13_requesting_association.png)
+![](images/webui/13_requesting_association.jpg)
 
 The test will take some time, depending on your dataset size and GPU. As a rule of thumb, it will take 5-6mins per dataset record. So for example, if your dataset has 50 subjects and each subject has 2 timepoints, then your dataset has 100 records and the test will take about 600mins (10 hours).
 
@@ -149,7 +149,7 @@ If you closed the web UI window, make sure to return back to your dataset dashbo
 
 If the test succeeded, you should see that the bottom of the page is similar to the following:
 
-![](images/webui/14_associate_confirm.png)
+![](images/webui/14_associate_confirm.jpg)
 
 It will present you with the test results and ask you to confirm association and sending these test results to the MedPerf server. Click `Yes` to confirm.
 
@@ -163,7 +163,7 @@ These are the list of models included in the inference experiment. You should ru
 
 Click on `Run All` to start inference. After clicking `Run All`, you should see something similar to the following:
 
-![](images/webui/16_run_all.png)
+![](images/webui/16_run_all.jpg)
 
 Note that the "Initial FeTS model" was already ran during the association request, so it will not run now, so that's fine, even if the UI is showing a spinning circle on its `Rerun` button. You are not supposed to re-run it.
 
@@ -201,7 +201,7 @@ You may encounter an error at some point, could be during setting your dataset o
 
 When you encounter an error, you will get an error pop up box. For example, this could happen during inference if your GPU has an issue:
 
-![](images/webui/20_error.png)
+![](images/webui/20_error.jpg)
 
 When an error occurs and you are unable to resolve it, please contact us using the the following email: <hasan.kassem@mlcommons.org>
 

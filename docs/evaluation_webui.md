@@ -36,17 +36,29 @@ Navigate to your MedPerf repository folder that you cloned before. Run the follo
 medperf --version
 ```
 
-If the version is `0.1.5`, then you just have to run `git pull`.
+**If the version is `0.1.6`**, then there is no update.
 
-If the version is not `0.1.5`, then you have to run the following:
+**If the version is `0.1.5`**, then run:
+
+```bash
+git pull
+pip install -e ./cli --force-reinstall --no-cache
+```
+
+and restart the web UI if you ran it before and it is still running (by pressing CTRL+C on the terminal where you ran the web UI then rerunning `medperf_webui`).
+
+**If the version is below `0.1.5`**, then you have to run the following:
 
 ```bash
 git remote add mlc https://github.com/mlcommons/medperf
 git fetch mlc
 git checkout -b inference mlc/main
+pip install -e ./cli --force-reinstall --no-cache
 ```
 
-Then verify again if the version becomes `0.1.5`.
+and restart the web UI if you ran it before and is still running (by pressing CTRL+C on the terminal where you ran the web UI then rerunning `medperf_webui`).
+
+**Finally**, verify again if the version becomes `0.1.6`.
 
 ## 2. Run the Web UI
 

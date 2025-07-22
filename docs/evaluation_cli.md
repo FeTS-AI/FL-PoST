@@ -4,6 +4,8 @@ This guide assumes you finished preparing your dataset and reached [this step](h
 
 **Note: It is highly recommended to instead follow the [Web UI instructions](./evaluation_webui.md) if you are able to use a local Web interface. The Command line interface is fine if you are not able to use a local web interface, but the web interface is much more user friendly and intuitive.**
 
+**Note: The screenshots below may show an outdated MedPerf version (e.g., `0.1.4`). That's fine.**
+
 ## Important steps for the Evaluation Phase
 
 For the evaluation phase to happen smoothly without interruption, and to minimize your interaction with the software, please do the following before starting with the instructions below:
@@ -37,14 +39,16 @@ Navigate to your MedPerf repository folder that you cloned before. Run the follo
 medperf --version
 ```
 
-If the version is `0.1.5`, then run:
+**If the version is `0.1.6`**, then there is no update.
+
+**If the version is `0.1.5`**, then run:
 
 ```bash
 git pull
 pip install -e ./cli --force-reinstall --no-cache
 ```
 
-If the version is not `0.1.5`, then you have to run the following:
+**If the version is below `0.1.5`**, then you have to run the following:
 
 ```bash
 git remote add mlc https://github.com/mlcommons/medperf
@@ -53,7 +57,7 @@ git checkout -b inference mlc/main
 pip install -e ./cli --force-reinstall --no-cache
 ```
 
-Then verify again if the version becomes `0.1.5`.
+**Finally**, verify again if the version becomes `0.1.6`.
 
 ## 2. Authentication with the MedPerf server
 
